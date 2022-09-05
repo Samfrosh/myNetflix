@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard_flow"
+    app:startDestination="@id/home">
+
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.sam_netflix.Home_fragment"
+        android:label="fragment_home_fragment"
+        tools:layout="@layout/fragment_home_fragment"/>
+
+    <fragment
+        android:id="@+id/search"
+        android:name="com.example.sam_netflix.Search_fragment"
+        android:label="fragment_search_fragment"
+        tools:layout="@layout/fragment_search_fragment" />
+
+    <fragment
+        android:id="@+id/downloads"
+        android:name="com.example.sam_netflix.Downloads_fragment"
+        android:label="fragment_downloads_fragment"
+        tools:layout="@layout/fragment_downloads_fragment" />
+    <activity
+        android:id="@+id/open_activity"
+        android:name="com.example.sam_netflix.Open_activity"
+        android:label="activity_open"
+        tools:layout="@layout/activity_open" />
+
+</navigation>

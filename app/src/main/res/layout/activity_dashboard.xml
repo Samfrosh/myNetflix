@@ -16,7 +16,7 @@
         app:itemIconTint="@color/white"
         app:menu="@menu/dashboard_menu"
         android:layout_margin="20dp"
-        android:padding="15dp"
+        android:padding="5dp"
         android:layout_alignParentBottom="true"/>
 
     <androidx.fragment.app.FragmentContainerView

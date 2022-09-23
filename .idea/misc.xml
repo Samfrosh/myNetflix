@@ -7,11 +7,12 @@
         <entry key="..\:/Users/samfr/AndroidStudioProjects/Sam_netflix/app/src/main/res/drawable/home.xml" value="0.131" />
         <entry key="..\:/Users/samfr/AndroidStudioProjects/Sam_netflix/app/src/main/res/drawable/ic_outline_home_24.xml" value="0.131" />
         <entry key="..\:/Users/samfr/AndroidStudioProjects/Sam_netflix/app/src/main/res/drawable/input_login.xml" value="0.131" />
-        <entry key="..\:/Users/samfr/AndroidStudioProjects/Sam_netflix/app/src/main/res/layout/activity_dashboard.xml" value="0.18" />
+        <entry key="..\:/Users/samfr/AndroidStudioProjects/Sam_netflix/app/src/main/res/layout/activity_dashboard.xml" value="0.25" />
         <entry key="..\:/Users/samfr/AndroidStudioProjects/Sam_netflix/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/samfr/AndroidStudioProjects/Sam_netflix/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/samfr/AndroidStudioProjects/Sam_netflix/app/src/main/res/layout/activity_open.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/samfr/AndroidStudioProjects/Sam_netflix/app/src/main/res/layout/activity_search.xml" value="0.203125" />
+        <entry key="..\:/Users/samfr/AndroidStudioProjects/Sam_netflix/app/src/main/res/layout/dashboard_scroll_design1.xml" value="0.203125" />
         <entry key="..\:/Users/samfr/AndroidStudioProjects/Sam_netflix/app/src/main/res/layout/fragment_downloads_fragment.xml" value="0.203125" />
         <entry key="..\:/Users/samfr/AndroidStudioProjects/Sam_netflix/app/src/main/res/layout/fragment_home_fragment.xml" value="0.203125" />
         <entry key="..\:/Users/samfr/AndroidStudioProjects/Sam_netflix/app/src/main/res/layout/fragment_search_fragment.xml" value="0.18" />

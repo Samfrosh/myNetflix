@@ -10,29 +10,144 @@
     android:orientation="vertical"
     android:background="@color/white">
 
-    <RelativeLayout
+    <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="30dp"
+        android:orientation="vertical"
     android:padding="20dp">
 
-    <ImageView
-        android:id="@+id/menu"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:paddingTop="20dp"
-        android:backgroundTint="@color/black"
-        android:background="@drawable/menu" />
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <ImageView
+           android:id="@+id/menu"
+           android:layout_width="30dp"
+           android:layout_height="30dp"
+           android:paddingTop="20dp"
+           android:layout_centerVertical="true"
+           android:backgroundTint="@color/black"
+           android:background="@drawable/menu" />
 
-        <TextView
+       <TextView
+           android:id="@+id/net"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:fontFamily="@font/bebas_neue"
+           android:gravity="center"
+           android:text="NETFLIX"
+           android:textColor="@color/main"
+           android:textSize="40sp"
+           android:textStyle="bold" />
+
+   </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+<HorizontalScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/bebas_neue"
-            android:gravity="center"
-            android:text="NETFLIX"
-            android:textColor="@color/main"
-            android:textSize="40sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
+            android:layout_marginTop="30dp">
+
+
+            <RelativeLayout
+                android:id="@+id/discover"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:background="@drawable/curve_navigation"
+                android:backgroundTint="@color/main" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Discover"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/categories"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:layout_toEndOf="@id/discover"
+                android:layout_marginStart="21dp"
+                android:background="@drawable/curve_navigation"
+                android:backgroundTint="@color/main" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Categories"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/trending"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:layout_toEndOf="@id/categories"
+                android:layout_marginStart="21dp"
+                android:background="@drawable/curve_navigation"
+                android:backgroundTint="@color/main" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trending"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/latest"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:layout_toEndOf="@id/trending"
+                android:layout_marginStart="21dp"
+                android:background="@drawable/curve_navigation"
+                android:backgroundTint="@color/main" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Latest"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+</HorizontalScrollView>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <com.google.android.material.navigation.NavigationView

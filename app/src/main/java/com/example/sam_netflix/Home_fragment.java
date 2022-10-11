@@ -8,6 +8,8 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -17,12 +19,18 @@ import android.widget.ImageView;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class Home_fragment extends Fragment implements NavigationView.OnNavigationItemSelectedListener {
+import java.util.ArrayList;
+
+public class Home_fragment extends Fragment implements NavigationView.OnNavigationItemSelectedListener, scroll_recyclerView.ItemClickListener {
 
     DrawerLayout drawerLayout ;
     NavigationView navigationView ;
     ActionBarDrawerToggle drawerToggle;
     ImageView menu;
+
+    RecyclerView recyclerView;
+    scroll_recyclerView adapter;
+    private ArrayList<scroll_product> userList = new ArrayList<>();
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -37,6 +45,17 @@ public class Home_fragment extends Fragment implements NavigationView.OnNavigati
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_home_fragment, container, false);
+
+        recyclerView =  view.findViewById(R.id.recyclerview);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(layoutManager);
+        layoutManager.setOrientation(RecyclerView.HORIZONTAL);
+
+        adapter = new scroll_recyclerView(this,userList);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setHasFixedSize(true);
+
+        build();
 
         menu = view.findViewById(R.id.menu);
         drawerLayout = view.findViewById(R.id.drawer_layout);
@@ -62,9 +81,21 @@ public class Home_fragment extends Fragment implements NavigationView.OnNavigati
         return view;
     }
 
+    private void build() {
+        userList.add(new scroll_product(R.drawable.background2));
+        userList.add(new scroll_product(R.drawable.backgroundflix));
+
+
+    }
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         return false;
+    }
+
+    @Override
+    public void onItemClick(scroll_product product) {
+
     }
 
 //    @Override
